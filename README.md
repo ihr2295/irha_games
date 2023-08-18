@@ -112,6 +112,9 @@ To view the IRHA A Rock, Paper, Scissors Game website locally, follow these step
 
 Link: [click here](https://hasibullah.com/irha/)
 
+### Also available in Github pages 
+Link: [click here](https://ihr2295.github.io/irha_games/src/)
+
 ## Credits
 
 - Images and graphics were used from [Freepik](https://www.freepik.com/), licensed under the Free and Premium plan.
