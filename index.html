@@ -19,165 +19,96 @@
 </head>
 
 <body>
-<!--Top Logo & Text Start-->
-<a href="index.html" class="logo" target="_blank">
-	<img src="img/logo.webp" alt="logo">
-</a>
-  <h1>IRHA A Rock, Paper, Scissors</h1>
-<!--Top Logo & Text End-->
 
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Rock Paper Scissors</span>
+        <!-- Button to trigger modal -->
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+            Instructions
+        </button>
+    </nav>
 
-<!--ScoreBoard Start-->
-<div class="scoreboard">
-  <div class="player-score">Player: 0</div>
-  <div class="computer-score">Computer: 0</div>
-</div>
-<!--ScoreBoard End-->
-
-<!--Choice Start-->
-<div class="choices">
-  <div class="choice" id="rock">
-    <i class="fas fa-hand-rock"></i>
-  </div>
-  <div class="choice" id="paper">
-    <i class="fas fa-hand-paper"></i>
-  </div>
-  <div class="choice" id="scissors">
-    <i class="fas fa-hand-scissors"></i>
-  </div>
-</div>
-<!--Choice End-->
-
-<!--Result Start-->
-<div class="result" id="result">
-  <p>Choose your weapon!</p>
-</div>
-<div id="computer-choice"></div>
-  <div class="timer" id="timer">
-    <p>Time left: <span id="countdown">10</span>s</p>
-  </div>
-<!--Result Ends-->
-
-<!--PlayAgain Start-->
-<button class="play-again" id="play-again">Play Again</button>
-<!--PlayAgain Ends-->
-  
-
-<!--Strategy Tips Start-->
-  <section class="strategy-tips-section">
-    <h2>Game Strategy Tips</h2>
-    <div class="strategy-tip">
-      <h3>TIP 1: Anticipate Opponent's Moves</h3>
-      <p>Pay attention to your opponent's patterns and previous moves. Try to anticipate their next move based on their tendencies.</p>
+    <!-- Main Heading -->
+    <div class="text-center mt-3">
+        <h1>WELCOME TO ROCK PAPER SCISSORS GAME!</h1>
     </div>
-    <div class="strategy-tip">
-      <h3>TIP 2: Mix Up Your Moves</h3>
-      <p>Don't stick to a predictable pattern. Mix up your moves to keep your opponent guessing and off-guard.</p>
+
+    <!-- Message Display -->
+    <div id="message" class="text-center h5"></div>
+
+    <!-- Start Button -->
+    <div class="text-center m-5" id="start">
+        <input type="submit" id="submit" class="btn btn-dark" value="Get Started!">
     </div>
-    <div class="strategy-tip">
-      <h3>TIP 3: Use Psychological Tricks</h3>
-      <p>Experiment with psychological strategies. Sometimes, acting confidently can make your opponent doubt their own choice.</p>
+
+    <!-- Game Boards -->
+    <div id="boards" class="boards">
+        <div class="row">
+            <!-- Player's Side -->
+            <div class="col-6 text-center">
+                <h1 class="text-center my-3">Player1</h1>
+                <div id='playerSide'>
+                    <h3 id="playerScore"></h3>
+                    <div id="playerSelect"></div>
+                </div>
+            </div>
+
+            <!-- Computer's Side -->
+            <div class="col-6 text-center p-0">
+                <h1 class="text-center my-3">Computer</h1>
+                <div id='computerSide'>
+                    <h3 id="computerScore"></h3>
+                    <div id="computerSelect"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  <!--Strategy Tips End-->
-  
-  
-<!-- Footer Links Icons Start-->
-<ul id="down_links">
-  <li data-link="#" class="popup-trigger" data-modal-target="how-modal">
-    <div class="image-wrapper">
-	    <img src="img/how.png" alt="how?">
+
+    <!-- Player Selection -->
+    <div id="select" class="text-center w-50 mx-auto my-3 select">
+        <div class="row">
+            <div id="rock" class="col-4"><i class="fas fa-hand-rock"></i></div>
+            <div id="paper" class="col-4"><i class="fas fa-hand-paper"></i></div>
+            <div id="scissors" class="col-4"><i class="fas fa-hand-scissors"></i></div>
+        </div>
     </div>
-	    <span>How to Play?</span>
-  </li>
-	<li data-link="#" class="popup-trigger" data-modal-target="history">
-    <div class="image-wrapper">
-			<img src="img/history.png" alt="History">
-        <span>History </span>
+
+    <!-- Game Instructions Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Game Instructions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- List of Game Instructions -->
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark">Click 'Get Started' button.</li>
+                        <li class="list-group-item list-group-item-dark">Choose between Rock, Paper, or Scissors by clicking the icon.</li>
+                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-rock"></i> Rock beats Scissors.</li>
+                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-scissors"></i> Scissors beats Paper.</li>
+                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-paper"></i> Paper beats Rock.</li>
+                        <li class="list-group-item list-group-item-dark">The first player to win 5 rounds is the winner.</li>
+                        <li class="list-group-item list-group-item-dark">Play again!</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-	</li>
-	<li data-link="#" class="popup-trigger" data-modal-target="contact">
-    <div class="image-wrapper">
-			<img src="img/contact.png" alt="contact">
-			<span>contact Us</span>
-    </div>
-	</li>
-</ul>
-<!-- Footer Links Icons End-->
+    <!-- End Modal -->
 
-<!-- Modal Start-->
-<!-- Modal code for how? Start-->
-<div class="modal" id="how-modal">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-      <h2>How to Play?</h2>
-      <P>A classic two-person game. Players start each round by saying, “rock, paper, scissors, 
-        shoot!” On “shoot,” each player holds out their fist for rock, flat hand for paper, 
-        or their index and middle finger for scissors.
-         Rock crushes scissors, scissors cut paper, and paper covers rock. See who wins each round!</P>
-         <img src="img/image-rules.png" alt="How to Play">
-  </div>
-</div>
-<!-- Modal code for how? End-->
-
-
-<!-- Modal code for history -->
-<div class="modal" id="history">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-      <h2>History of Rock Paper Scissors </h2>
-      <P>Rock Paper Scissors is considered the oldest hand game in the world. In fact, the game dates 
-        all the way back to the Chinese Han Dynasty. This era began in 206 BC and ended in 220 AD. 
-        There are also accounts of this game in Japanese history. The earliest versions of this game consisted of a slug, 
-        snake, and frog. Rocks, papers, and scissors were used in a later version of the game developed in the 17th century. 
-        It wasn’t until the 1920’s that the popular Asian hand game made its way to Great Britain. 
-        In 1932, an article in the New York Times described the rules of Rock Paper Scissors.</P>
-         <img src="img/history.jpg" alt="history">
-  </div>
-</div>
-<!-- Modal code for history End-->
-
-
-<!-- Modal for "Contact Us" Start -->
-<div class="modal" id="contact">
-  <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h2>Contact Us</h2>
-      <form id="contact-form" action="success.html" method="get">
-          <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          
-          <div class="form-group">
-              <button type="submit" id="submit-button">Send</button>
-          </div>
-      </form>
-  </div>
-</div>
-<!-- Modal for "Contact Us" Start -->
-
-<!-- Modal End -->
-
-<!--Footer Start-->
-  <div> 
-    <footer>
-    <small>
-      Copyright © 2023 IRHA Games Archives. All Rights Reserved.
-    </small>
-  </footer>
-</div>
-<!--Footer End-->
+    <!-- Footer -->
+    <footer class="bg-dark">
+        <p>Author:&copy; Hasibullah Rahmani<br>
+            <a href="mailto:hasibullah.rahmani1995@gmail.com">hr@hasibullah.com</a></p>
+    </footer>
 
 <!-- Script of javascript Source-->
 <script type="text/javascript" src="./script/popper.min.js"></script> 
