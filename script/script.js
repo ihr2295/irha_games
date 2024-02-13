@@ -1,152 +1,150 @@
-const choices = document.querySelectorAll('.choice');
-const playerScoreElem = document.querySelector('.player-score');
-const computerScoreElem = document.querySelector('.computer-score');
-const resultElem = document.querySelector('#result');
-const playAgainBtn = document.querySelector('#play-again');
-const countdownElem = document.querySelector('#countdown');
-const computerChoiceElem = document.querySelector('#computer-choice');
-
-const weapons = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let computerScore = 0;
-let countdown = 10;
-let timeout;
+const pScore = document.getElementById('playerScore');
+const cScore = document.getElementById('computerScore');
+const compSelect = document.getElementById('computerSelect');
+const playerSelect = document.getElementById('playerSelect');
+const message = document.getElementById('message');
+let gameActive = false;
 
-// Function to generate random weapon for computer
 function computerPlay() {
-  const weaponIndex = Math.floor(Math.random() * weapons.length);
-  return weapons[weaponIndex];
+  let arr = [1, 2, 3];
+  let random = arr[Math.floor(Math.random() * arr.length)];
+  let value;
+  switch (random) {
+    case 1:
+      value = 'rock';
+      break;
+    case 2:
+      value = 'paper';
+      break;
+    default:
+      value = 'scissors';
+  }
+  return value;
 }
 
-// Function to update score and display result
-function updateScore(playerWeapon, computerWeapon) {
-  clearTimeout(timeout);
-  if (playerWeapon) {
-    computerChoiceElem.innerHTML = `Computer choose: ${computerWeapon}.`;
-    if (playerWeapon === computerWeapon) {
-      resultElem.innerHTML = "It's a tie!";
-    } else if (
-      (playerWeapon === 'rock' && computerWeapon === 'scissors') ||
-      (playerWeapon === 'paper' && computerWeapon === 'rock') ||
-      (playerWeapon === 'scissors' && computerWeapon === 'paper')
-    ) {
-      resultElem.innerHTML = 'You win!';
-      playerScore++;
-      playerScoreElem.innerHTML = `Player: ${playerScore}`;
-    } else {
-      resultElem.innerHTML = 'Computer wins!';
-      computerScore++;
-      computerScoreElem.innerHTML = `Computer: ${computerScore}`;
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return 'Draw!';
+  } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
+    return "Player won!";
+  } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
+    return "Player won!";
+  } else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
+    return "Player won!";
+  } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
+    return "Computer won!";
+  } else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
+    return "Computer won!";
+  } else if ((playerSelection == "rock") && (computerSelection == "paper")) {
+    return "Computer won!";
+  }
+}
+
+function gameFlow(playerSelection) {
+  const winner = selection(playerSelection);
+  const result = winner.winner;
+  const compMov = winner.compMove;
+  displaySelection('player', playerSelection, result);
+  displaySelection('computer', compMov, result);
+  scoreBoard(result);
+  message.innerText = result;
+  whoWon();
+  reset();
+}
+
+function selection(playerSelection) {
+  let computer = computerPlay();
+  let winner = playRound(playerSelection, computer)
+  return {
+    winner: winner,
+    compMove: computer
+  };
+}
+
+function displaySelection(player, selection, result) {
+  if (player === 'player') {
+    playerSelect.innerHTML = `<i class="fas fa-hand-${selection}"></i>`;
+    if (result === "Player won!") {
+      playerSelect.style.color = 'green';
+      compSelect.style.color = 'red';
     }
-    startTimer();
   } else {
-    computerChoiceElem.innerHTML = `Game Over`;
-    resultElem.innerHTML = 'You did not make a choice! | You lose the game!';
-    resultElem.style.color = 'red';
-    disableOptions();
+    compSelect.innerHTML = `<i class="fas fa-hand-${selection}"></i>`;
+    if (result === "Computer won!") {
+      compSelect.style.color = 'green';
+      playerSelect.style.color = 'red';
+    }
   }
-
-  if (playerScore === 5) {
-    resultElem.textContent = 'You win the game!';
-    resultElem.style.color = 'green';
-    computerChoiceElem.innerHTML = 'Game Over';
-    disableOptions();
-    stopTimer();
-  }
-
-  if (computerScore === 5) {
-    resultElem.textContent = 'You lose the game!';
-    resultElem.style.color = 'red';
-    computerChoiceElem.innerHTML = 'Game Over';
-    disableOptions();
-    stopTimer();
+  if (result === 'Draw!') {
+    compSelect.style.color = '';
+    playerSelect.style.color = '';
   }
 }
 
-// Function to handle player choice
-function selectWeapon() {
-  clearTimeout(timeout);
-  countdownElem.innerHTML = '10';
-  countdown = 10;
-  const playerWeapon = this.id;
-  const computerWeapon = computerPlay();
-  updateScore(playerWeapon, computerWeapon);
-}
-
-// Function to start countdown timer
-function startTimer() {
-  countdown--;
-  countdownElem.innerHTML = countdown;
-  if (countdown === 0) {
-    const computerWeapon = computerPlay();
-    updateScore(null, computerWeapon);
+function scoreBoard(result) {
+  if (result === "Player won!") {
+    playerScore++;
+    pScore.innerText = playerScore;
+    cScore.innerText = computerScore;
+  } else if (result === "Computer won!") {
+    computerScore++;
+    pScore.innerText = playerScore;
+    cScore.innerText = computerScore;
   } else {
-    timeout = setTimeout(startTimer, 1000);
+    return false;
   }
 }
 
-function stopTimer() {
-  clearInterval(timeout);
-  countdown = 10;
-  countdownElem.textContent = countdown;
+function endGame() {
+  if (playerScore === 5 || computerScore === 5) {
+    return true
+  }
+  return false;
 }
 
-// Function to reset the game
-function resetGame() {
-  playerScore = 0;
-  computerScore = 0;
-  countdown = 10;
-  playerScoreElem.innerHTML = 'Player: 0';
-  computerScoreElem.innerHTML = 'Computer: 0';
-  resultElem.innerHTML = 'Choose your weapon!';
-  countdownElem.innerHTML = '10';
-  resultElem.style.color = '#660033';
-  computerChoiceElem.innerHTML = '';
-  enableOptions();
-  startTimer();
+function whoWon() {
+  if (endGame()) {
+    if (playerScore === 5) {
+      message.innerText = 'Player is the Winner! Congratulations!'
+    } else {
+      message.innerText = 'Computer is the Winner! You Lose!'
+    }
+  }
 }
 
-function disableOptions() {
-  choices.forEach((choice) => {
-    choice.style.pointerEvents = 'none';
-  });
+function reset() {
+  if (endGame()) {
+    setTimeout(function(){
+      playerScore = 0;
+      computerScore = 0;
+      compSelect.innerHTML = '';
+      playerSelect.innerHTML = '';
+      pScore.innerText = playerScore;
+      cScore.innerText = computerScore;
+      message.innerText = 'Play Again!';
+      gameActive = false;
+    }, 3000);    
+  }
 }
 
-function enableOptions() {
-  choices.forEach((choice) => {
-    choice.style.pointerEvents = 'auto';
-  });
+const submit = document.getElementById('submit');
+submit.addEventListener('click', displayBoards.bind(this));
+
+function displayBoards() {
+  const start = document.getElementById('start');
+  const boards = document.getElementById('boards');
+  const select = document.getElementById('select');
+  start.style.display = 'none';
+  boards.style.display = 'block';
+  select.style.display = 'block';
+  gameActive = true;
 }
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
 
-// Event listeners
-choices.forEach((choice) => choice.addEventListener('click', selectWeapon));
-playAgainBtn.addEventListener('click', resetGame);
-
-// Start countdown timer when page loads
-countdownElem.innerHTML = countdown; // Set initial value of countdown in HTML
-timeout = setTimeout(startTimer, 1000);
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const popupTriggers = document.querySelectorAll(".popup-trigger");
-  const modals = document.querySelectorAll(".modal");
-  const closeButtons = document.querySelectorAll(".modal-close");
-
-  popupTriggers.forEach(trigger => {
-      trigger.addEventListener("click", function() {
-          const targetModalId = this.getAttribute("data-modal-target");
-          const targetModal = document.getElementById(targetModalId);
-          targetModal.style.display = "block";
-      });
-  });
-
-  modals.forEach(modal => {
-      modal.addEventListener("click", function(e) {
-          if (e.target.classList.contains("modal") || e.target.classList.contains("modal-close")) {
-              modal.style.display = "none";
-          }
-      });
-  });
-});
-
+rock.addEventListener('click', gameFlow.bind(this, rock.id));
+paper.addEventListener('click', gameFlow.bind(this, paper.id));
+scissors.addEventListener('click', gameFlow.bind(this, scissors.id));
