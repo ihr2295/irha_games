@@ -1,42 +1,294 @@
-.fa-hand-rock,
-.fa-hand-paper,
-.fa-hand-scissors {
-  font-size: 4rem;
-  font-weight: bolder;
-  cursor: pointer;
+/* styles.css */
+/* universal selector - Applies to whole document */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: #082c6c;
+	color: #fff;
 }
 
-.modal-body ul li i {
-  font-size: 1.5rem;
-  font-weight: 500;
+/* Additional styles for the welcome page */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.boards,
-.select {
-  display: none;
+.input-container {
+    margin-top: 20px;
+    text-align: center;
 }
 
-#playerSide,
-#computerSide {
-  height: 225px;
+/* Input field style */
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #007BFF; /* Border color */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
-html, body {
-  height: 100%;
+input[type="text"]:focus {
+    border-color: #0056b3; /* Highlight border color on focus */
 }
 
-footer {
-  clear: both;
-  border: 1px groove #aaaaaa;
-  background: blue;
-  color: White;
-  padding: 0;
-  text-align: center;
-  vertical-align: middle;
-  line-height: normal;
-  margin: 0;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5b5b;
+}
+
+/* Modal Text */
+h3 {
+    font-size: 18px;
+	color: #082c6c;
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+
+
+/* Modal Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* To center everything in game */
+.game{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Title of the game */
+.title{
+	position: absolute;
+	top: 0;
+	font-size: 4rem;
+	z-index: 2;
+}
+
+/* Logo styling */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.logo-container img {
+    width: 50px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Score Board */
+.score{
+	display: flex;
+	width: 30vw;
+	justify-content: space-evenly;
+	position: absolute;
+	top: 70px;
+	z-index: 1;
+}
+
+/* Score */
+.p-count,.c-count{
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+/* displaying three buttons in one line */
+.options{
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	margin-top: 2rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around; /* Align icons evenly */
+    width: 300px; /* Adjust the width as needed */
+}
+
+/* Style for each icon */
+.rock, .paper, .scissor {
+    padding: 13px; /* Increase padding for better clickability */
+    border-radius: 50%; /* Make the icons circular */
+    background: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    font-size: 50px; /* Adjust icon size */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Add smooth transitions */
+}
+
+/* Hover effect */
+.rock:hover, .paper:hover, .scissor:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+
+.move{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+/* Reload button style */
+.reload {
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+	background: green;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.result{
+	margin-top: 20px;
+	font-size: 1.2rem;
+}
+
+.modaltitle {
+	font-size: 25px;
+	color: #6b6b6b;
+	background: #fff;
+	border-bottom: 1px solid #aaa;
+	text-align: left; /* Aligning the text to the left */
+}
+
+.modalparagraph {
+    font-size: 18px;
+	color: #fff;
+	background: #007BFF;
+	margin-bottom: 10px;
+	border: 10px solid #007BFF;
+}
+
+
+
+#instructionsModalContainer {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000; /* Add a higher z-index value */
+  }
+
+#instructionsModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+  }
+  
+  #instructionsModal .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 800px;
+	text-align: left;
+	border-radius: 4px;
+  }
+  
+  #instructionsModal .modal-content h2 {
+	margin-top: 0;
+	margin-bottom: 13px;
+  }
+  
+  #instructionsModal .modal-content p {
+	margin-bottom: 2px;
+  }
+  
+  #instructionsModal .close {
+	color: #aaa;
+	background-color: #fff;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  #instructionsModal .close:hover,
+  #instructionsModal .close:focus {
+	color: black;
+	text-decoration: none;
+	filter: brightness(90%);
+  }
+
+/* Responsive Design */
+@media screen and (max-width: 612px)
+{ 
+	.title{
+		text-align: center;
+	}
+	.score{
+		position: absolute;
+		top: 200px;
+		width: 100vw;
+	}
+	.options{
+		width: 100vw;
+	}
+}

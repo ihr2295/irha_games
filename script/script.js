@@ -1,161 +1,205 @@
-// Initialize scores and DOM elements
-let playerScore = 0;
-let computerScore = 0;
-const pScore = document.getElementById('playerScore');
-const cScore = document.getElementById('computerScore');
-const compSelect = document.getElementById('computerSelect');
-const playerSelect = document.getElementById('playerSelect');
-const message = document.getElementById('message');
-let gameActive = false;
+document.addEventListener("DOMContentLoaded", function () {
+  const playerNameElement = document.getElementById("playerNameDisplay");
+  const playerName = sessionStorage.getItem('playerName');
 
-// Function to randomly select rock, paper, or scissors for the computer
-function computerPlay() {
-  let arr = [1, 2, 3];
-  let random = arr[Math.floor(Math.random() * arr.length)];
-  let value;
-  switch (random) {
-    case 1:
-      value = 'rock';
-      break;
-    case 2:
-      value = 'paper';
-      break;
-    default:
-      value = 'scissors';
+  console.log("Player Name:", playerName); // Debugging statement
+
+  // Update the name display
+  if (playerNameElement && playerName) {
+      playerNameElement.textContent = decodeURIComponent(playerName);
   }
-  return value;
-}
 
-// Function to determine the winner of a round
-function playRound(playerSelection, computerSelection) {
-  if (playerSelection === computerSelection) {
-    return 'Draw!';
-  } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
-    return "Player won!";
-  } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
-    return "Player won!";
-  } else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
-    return "Player won!";
-  } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
-    return "Computer won!";
-  } else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
-    return "Computer won!";
-  } else if ((playerSelection == "rock") && (computerSelection == "paper")) {
-    return "Computer won!";
-  }
-}
+  // Function to show Name Modal
+  const showNameModal = () => {
+      console.log("Showing Name Modal"); // Debugging statement
 
-// Function to handle the game flow for each player selection
-function gameFlow(playerSelection) {
-  const winner = selection(playerSelection);
-  const result = winner.winner;
-  const compMov = winner.compMove;
-  displaySelection('player', playerSelection, result);
-  displaySelection('computer', compMov, result);
-  scoreBoard(result);
-  message.innerText = result;
-  whoWon();
-  reset();
-}
-
-// Function to determine the winner and computer's move for a player selection
-function selection(playerSelection) {
-  let computer = computerPlay();
-  let winner = playRound(playerSelection, computer)
-  return {
-    winner: winner,
-    compMove: computer
+      // Show Name Modal
+      const nameModal = document.getElementById('nameModal');
+      if (nameModal) {
+          nameModal.style.display = 'block';
+      }
   };
+
+  // Function to show Start Game Modal
+  const showStartGameModal = () => {
+      // Show Start Game Modal
+      const startGameModal = document.getElementById('startGameModal');
+      if (startGameModal) {
+          startGameModal.style.display = 'block';
+      }
+  };
+
+  // Function to start the game
+  window.startGame = () => {
+      const playerNameInput = document.getElementById("playerName");
+      const playerName = playerNameInput.value.trim();
+
+      if (playerName) {
+          sessionStorage.setItem('playerName', playerName);
+
+          const playerNameInModal = document.getElementById('startGameMessage');
+          if (playerNameInModal) {
+              playerNameInModal.textContent = `Ready to start the game, ${playerName}?`;
+          }
+
+          showStartGameModal();
+      } else {
+          alert("Please enter your name before starting the game.");
+      }
+  };
+
+  // Add event listener to the "No" button only if it exists
+  const startGameModalNoButton = document.getElementById('startGameModalNo');
+  if (startGameModalNoButton) {
+      startGameModalNoButton.addEventListener('click', () => {
+          const startGameModal = document.getElementById('startGameModal');
+          if (startGameModal) {
+              startGameModal.style.display = 'none';
+          }
+      });
+  }
+
+  // Handle "OK" button click for Start Game Modal
+  const startGameModalOkButton = document.getElementById('startGameModalOk');
+  if (startGameModalOkButton) {
+      startGameModalOkButton.addEventListener('click', () => {
+          const playerName = sessionStorage.getItem('playerName');
+          if (playerName) {
+              window.location.href = `game.html?playerName=${encodeURIComponent(playerName)}`;
+          } else {
+              alert("Player name not found.");
+          }
+      });
+  }
+
+
+
+
+
+
+
+  // Function to show Instructions Modal
+const showInstructionsModal = () => {
+  const instructionsModal = document.getElementById('instructionsModal');
+  if (instructionsModal) {
+    instructionsModal.style.display = 'block';
+  }
+};
+
+// Function to close Instructions Modal
+const closeInstructionsModal = () => {
+  const instructionsModal = document.getElementById('instructionsModal');
+  if (instructionsModal) {
+    instructionsModal.style.display = 'none';
+  }
+};
+
+// Add event listener to the "Instructions" button only if it exists
+const instructionsButton = document.getElementById('instructionsButton');
+if (instructionsButton) {
+  instructionsButton.addEventListener('click', showInstructionsModal);
 }
 
-// Function to display the selected moves with styling based on the result
-function displaySelection(player, selection, result) {
-  if (player === 'player') {
-    playerSelect.innerHTML = `<i class="fas fa-hand-${selection}"></i>`;
-    if (result === "Player won!") {
-      playerSelect.style.color = 'green';
-      compSelect.style.color = 'red';
+// Add event listener to the close button of Instructions Modal only if it exists
+const closeButton = document.querySelector('#instructionsModal .close');
+if (closeButton) {
+  closeButton.addEventListener('click', closeInstructionsModal);
+}
+
+// Add event listener to the background of Instructions Modal only if it exists
+const instructionsModal = document.getElementById('instructionsModal');
+if (instructionsModal) {
+  instructionsModal.addEventListener('click', (event) => {
+    if (event.target === instructionsModal) {
+      closeInstructionsModal();
     }
-  } else {
-    compSelect.innerHTML = `<i class="fas fa-hand-${selection}"></i>`;
-    if (result === "Computer won!") {
-      compSelect.style.color = 'green';
-      playerSelect.style.color = 'red';
-    }
-  }
-  if (result === 'Draw!') {
-    compSelect.style.color = '';
-    playerSelect.style.color = '';
-  }
-}
-// Function to update the scoreboard based on the result
-function scoreBoard(result) {
-  if (result === "Player won!") {
-    playerScore++;
-    pScore.innerText = playerScore;
-    cScore.innerText = computerScore;
-  } else if (result === "Computer won!") {
-    computerScore++;
-    pScore.innerText = playerScore;
-    cScore.innerText = computerScore;
-  } else {
-    return false;
-  }
+  });
 }
 
-// Function to check if the game has ended after 5 round
-function endGame() {
-  if (playerScore === 5 || computerScore === 5) {
-    return true
+
+
+  // Additional logic for game.html
+  if (window.location.pathname.endsWith("game.html")) {
+      const playGame = () => {
+          const playerOptions = document.querySelectorAll('.rock, .paper, .scissor');
+          let playerScore = 0;
+          let computerScore = 0;
+          let moves = 0;
+
+          playerOptions.forEach(option => {
+              option.addEventListener('click', function () {
+                  const movesLeft = document.querySelector('.movesleft');
+                  moves++;
+                  movesLeft.innerText = `Moves Left: ${10 - moves}`;
+                  
+                  const playerChoice = this.getAttribute('data-choice');
+                  const choiceNumber = Math.floor(Math.random() * 3);
+                  const computerChoice = ['rock', 'paper', 'scissors'][choiceNumber];
+
+                //  winner(this.innerText.toLowerCase(), computerChoice);
+                winner(playerChoice, computerChoice); // Pass player's choice to winner function
+
+                  if (moves === 10) {
+                      gameOver(playerOptions, movesLeft);
+                  }
+              });
+          });
+
+          const winner = (player, computer) => {
+              const result = document.querySelector('.result');
+              const playerScoreBoard = document.querySelector('.p-count');
+              const computerScoreBoard = document.querySelector('.c-count');
+
+              if (player === computer) {
+                  result.textContent = 'Tie';
+              } else if ((player === 'rock' && computer === 'scissors') ||
+                  (player === 'paper' && computer === 'rock') ||
+                  (player === 'scissors' && computer === 'paper')) {
+                  result.textContent = 'Player Won';
+                  playerScore++;
+              } else {
+                  result.textContent = 'Computer Won';
+                  computerScore++;
+              }
+
+              playerScoreBoard.textContent = playerScore;
+              computerScoreBoard.textContent = computerScore;
+          };
+
+          const gameOver = (playerOptions, movesLeft) => {
+              const chooseMove = document.querySelector('.move');
+              const result = document.querySelector('.result');
+              const reloadBtn = document.querySelector('.reload');
+
+              playerOptions.forEach(option => {
+                  option.style.display = 'none';
+              });
+
+              chooseMove.innerText = 'Game Over!!';
+              movesLeft.style.display = 'none';
+
+              if (playerScore > computerScore) {
+                  result.style.fontSize = '2rem';
+                  result.innerText = 'You Won The Game';
+                  result.style.color = '#308D46';
+              } else if (playerScore < computerScore) {
+                  result.style.fontSize = '2rem';
+                  result.innerText = 'You Lost The Game';
+                  result.style.color = 'red';
+              } else {
+                  result.style.fontSize = '2rem';
+                  result.innerText = 'Tie';
+                  result.style.color = 'grey';
+              }
+
+              reloadBtn.innerText = 'Restart';
+              reloadBtn.style.display = 'flex';
+              reloadBtn.addEventListener('click', () => {
+                  window.location.reload();
+              });
+          };
+      };
+
+      playGame();
   }
-  return false;
-}
-
-// Function to display the winner of the game
-function whoWon() {
-  if (endGame()) {
-    if (playerScore === 5) {
-      message.innerText = 'Player is the Winner! Congratulations!'
-    } else {
-      message.innerText = 'Computer is the Winner! You Lose!'
-    }
-  }
-}
-
-// Function to reset the game after completion
-function reset() {
-  if (endGame()) {
-    setTimeout(function(){
-      playerScore = 0;
-      computerScore = 0;
-      compSelect.innerHTML = '';
-      playerSelect.innerHTML = '';
-      pScore.innerText = playerScore;
-      cScore.innerText = computerScore;
-      message.innerText = 'Play Again!';
-      gameActive = false;
-    }, 3000);    
-  }
-}
-
-// Event listener to display game boards on button click
-const submit = document.getElementById('submit');
-submit.addEventListener('click', displayBoards.bind(this));
-
-function displayBoards() {
-  const start = document.getElementById('start');
-  const boards = document.getElementById('boards');
-  const select = document.getElementById('select');
-  start.style.display = 'none';
-  boards.style.display = 'block';
-  select.style.display = 'block';
-  gameActive = true;
-}
-// Event listeners for player selections (rock, paper, scissors)
-const rock = document.getElementById('rock');
-const paper = document.getElementById('paper');
-const scissors = document.getElementById('scissors');
-
-rock.addEventListener('click', gameFlow.bind(this, rock.id));
-paper.addEventListener('click', gameFlow.bind(this, paper.id));
-scissors.addEventListener('click', gameFlow.bind(this, scissors.id));
+});
