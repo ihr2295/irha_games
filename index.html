@@ -9,123 +9,63 @@
   <meta name="description" content="the IRHA A Rock, Paper, Scissors Game, where you can play the classic Game of Rock, Paper, Scissor Game against Computer or System.">
   <meta name="keywords" content="Rock, Paper, Scissors, Game, Play, Strategy, Fun, Entertainment">
   <!-- Meta Data End-->
-  <title>Rock, Paper, Scissors Game</title>
+  <title>IrhaGames A Rock Paper Scissors Game</title>
   <!--link start-->
-  <link rel="icon" href="./assets/images/logo.webp" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
-  <link rel="stylesheet" type="text/css" href="./assets/styles/bootstrap.min.css">
-  <script src="./script/fontawesome.js"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!--Link end-->
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1">Rock Paper Scissors</span>
-    <!-- Button to trigger modal -->
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
-      Instructions
-    </button>
-  </nav>
-
-  <!-- Main Heading -->
-  <div class="text-center mt-3">
-    <h1>WELCOME TO ROCK PAPER SCISSORS GAME!</h1>
-  </div>
-
-  <!-- Message Display -->
-  <div id="message" class="text-center h5"></div>
-
-  <!-- Start Button -->
-  <div class="text-center m-5" id="start">
-    <input type="submit" id="submit" class="btn btn-dark" value="Get Started!">
-  </div>
-
-  <!-- Game Boards -->
-  <div id="boards" class="boards">
-    <div class="row">
-      <!-- Player's Side -->
-      <div class="col-6 text-center">
-        <h1 class="text-center my-3">Player1</h1>
-        <div id='playerSide'>
-          <h3 id="playerScore"></h3>
-          <div id="playerSelect"></div>
-        </div>
-      </div>
-
-      <!-- Computer's Side -->
-      <div class="col-6 text-center p-0">
-        <h1 class="text-center my-3">Computer</h1>
-        <div id='computerSide'>
-          <h3 id="computerScore"></h3>
-          <div id="computerSelect"></div>
-        </div>
-      </div>
+  <section class="welcome">
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="./assets/image/logo.webp" alt="Game Logo">
     </div>
-  </div>
 
-  <!-- Round Container -->
-  <div id="roundContainer" class="text-center mt-3">
-    <h4 id="roundBoard"></h4>
-  </div>
+    <!-- Welcome Message -->
+    <h1>Welcome to the Game</h1>
 
-  <!-- Reset Container -->
-  <div id="resetContainer" class="text-center mt-3" style="display: none;">
-    <button id="reset" class="btn btn-dark">Reset</button>
-  </div>
-
-  <!-- Player Selection -->
-  <div id="select" class="text-center w-50 mx-auto my-3 select">
-    <div class="row">
-      <div id="rock" class="col-4"><i class="fas fa-hand-rock"></i></div>
-      <div id="paper" class="col-4"><i class="fas fa-hand-paper"></i></div>
-      <div id="scissors" class="col-4"><i class="fas fa-hand-scissors"></i></div>
+    <!-- Player Input and Start Button -->
+    <div class="input-container">
+      <!--  <label for="playerName">Enter your name:</label> -->
+        <input type="text" id="playerName" placeholder="Enter Your Name">
+        <button class="fas fa-play" onclick="startGame()"> Start the Game</button>
+        <button  id="instructionsButton" class="fas fa-question-circle"> Instructions</button>
     </div>
-  </div>
 
-  <!-- Game Instructions Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Game Instructions</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- List of Game Instructions -->
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-dark">Click 'Get Started' button.</li>
-            <li class="list-group-item list-group-item-dark">Choose between Rock, Paper, or Scissors by clicking the icon.</li>
-            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-rock"></i> Rock beats Scissors.</li>
-            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-scissors"></i> Scissors beats Paper.</li>
-            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-paper"></i> Paper beats Rock.</li>
-            <li class="list-group-item list-group-item-dark">The first player to win 5 rounds is the winner.</li>
-            <li class="list-group-item list-group-item-dark">Play again!</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Modal -->
+<!-- Custom Modals -->
 
-  <!-- Footer -->
-  <footer class="bg-dark">
-    <p>Author:&copy; Hasibullah Rahmani<br>
-      <a href="mailto:hasibullah.rahmani1995@gmail.com">hr@hasibullah.com</a></p>
-  </footer>
+<div id="startGameModal" class="modal">
+<div class="modal-content">
+    <h3 id="startGameMessage"></h3>
+    <button id="startGameModalOk">Yes</button>
+    <button id="startGameModalNo">No</button>
+</div>
+</div>
 
-  <!-- Script of javascript Source-->
-  <script src="./script/popper.min.js"></script>
-  <script src="./script/jquery-3.5.1.slim.min.js"></script>
-  <script src="./script/bootstrap.min.js"></script>
-  <script src="./script/script.js"></script>
 
+<div id="instructionsModal" class="modal">
+<div class="modal-content">
+  <span class="close">&times;</span>
+
+  <h2 class="modaltitle">Game Instructions</h3>
+  <p class="modalparagraph">Enter Your Name and CLick "Start The Game".</p1>
+  <p class="modalparagraph">Choose between Rock, Paper or Scissors by clicking in the icon.</p>
+  <p class="modalparagraph">Rock beats Scissors.</p>
+  <p class="modalparagraph">Scissors beats Paper.</p>
+  <p class="modalparagraph">Paper beats Rock.</p>
+  <p class="modalparagraph">There is 10 Move for you and Computer.</p>
+  <p class="modalparagraph">Player with the most Points will win.</p>
+  <p class="modalparagraph">Play again!</p>
+  <h2 class="modaltitle"></h3>
+</div>
+</div>
+
+</section>
+
+<script src="./script/script.js"></script>
 </body>
 
 </html>
