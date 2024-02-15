@@ -20,101 +20,112 @@
 
 <body>
 
-      <!-- Navigation Bar -->
-      <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Rock Paper Scissors</span>
-        <!-- Button to trigger modal -->
-        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
-            Instructions
-        </button>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Rock Paper Scissors</span>
+    <!-- Button to trigger modal -->
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+      Instructions
+    </button>
+  </nav>
 
-    <!-- Main Heading -->
-    <div class="text-center mt-3">
-        <h1>WELCOME TO ROCK PAPER SCISSORS GAME!</h1>
-    </div>
+  <!-- Main Heading -->
+  <div class="text-center mt-3">
+    <h1>WELCOME TO ROCK PAPER SCISSORS GAME!</h1>
+  </div>
 
-    <!-- Message Display -->
-    <div id="message" class="text-center h5"></div>
+  <!-- Message Display -->
+  <div id="message" class="text-center h5"></div>
 
-    <!-- Start Button -->
-    <div class="text-center m-5" id="start">
-        <input type="submit" id="submit" class="btn btn-dark" value="Get Started!">
-    </div>
+  <!-- Start Button -->
+  <div class="text-center m-5" id="start">
+    <input type="submit" id="submit" class="btn btn-dark" value="Get Started!">
+  </div>
 
-    <!-- Game Boards -->
-    <div id="boards" class="boards">
-        <div class="row">
-            <!-- Player's Side -->
-            <div class="col-6 text-center">
-                <h1 class="text-center my-3">Player1</h1>
-                <div id='playerSide'>
-                    <h3 id="playerScore"></h3>
-                    <div id="playerSelect"></div>
-                </div>
-            </div>
-
-            <!-- Computer's Side -->
-            <div class="col-6 text-center p-0">
-                <h1 class="text-center my-3">Computer</h1>
-                <div id='computerSide'>
-                    <h3 id="computerScore"></h3>
-                    <div id="computerSelect"></div>
-                </div>
-            </div>
+  <!-- Game Boards -->
+  <div id="boards" class="boards">
+    <div class="row">
+      <!-- Player's Side -->
+      <div class="col-6 text-center">
+        <h1 class="text-center my-3">Player1</h1>
+        <div id='playerSide'>
+          <h3 id="playerScore"></h3>
+          <div id="playerSelect"></div>
         </div>
-    </div>
+      </div>
 
-    <!-- Player Selection -->
-    <div id="select" class="text-center w-50 mx-auto my-3 select">
-        <div class="row">
-            <div id="rock" class="col-4"><i class="fas fa-hand-rock"></i></div>
-            <div id="paper" class="col-4"><i class="fas fa-hand-paper"></i></div>
-            <div id="scissors" class="col-4"><i class="fas fa-hand-scissors"></i></div>
+      <!-- Computer's Side -->
+      <div class="col-6 text-center p-0">
+        <h1 class="text-center my-3">Computer</h1>
+        <div id='computerSide'>
+          <h3 id="computerScore"></h3>
+          <div id="computerSelect"></div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Game Instructions Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Game Instructions</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- List of Game Instructions -->
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-dark">Click 'Get Started' button.</li>
-                        <li class="list-group-item list-group-item-dark">Choose between Rock, Paper, or Scissors by clicking the icon.</li>
-                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-rock"></i> Rock beats Scissors.</li>
-                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-scissors"></i> Scissors beats Paper.</li>
-                        <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-paper"></i> Paper beats Rock.</li>
-                        <li class="list-group-item list-group-item-dark">The first player to win 5 rounds is the winner.</li>
-                        <li class="list-group-item list-group-item-dark">Play again!</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                </div>
-            </div>
+  <!-- Round Container -->
+  <div id="roundContainer" class="text-center mt-3">
+    <h4 id="roundBoard"></h4>
+  </div>
+
+  <!-- Reset Container -->
+  <div id="resetContainer" class="text-center mt-3" style="display: none;">
+    <button id="reset" class="btn btn-dark">Reset</button>
+  </div>
+
+  <!-- Player Selection -->
+  <div id="select" class="text-center w-50 mx-auto my-3 select">
+    <div class="row">
+      <div id="rock" class="col-4"><i class="fas fa-hand-rock"></i></div>
+      <div id="paper" class="col-4"><i class="fas fa-hand-paper"></i></div>
+      <div id="scissors" class="col-4"><i class="fas fa-hand-scissors"></i></div>
+    </div>
+  </div>
+
+  <!-- Game Instructions Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Game Instructions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <!-- List of Game Instructions -->
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-dark">Click 'Get Started' button.</li>
+            <li class="list-group-item list-group-item-dark">Choose between Rock, Paper, or Scissors by clicking the icon.</li>
+            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-rock"></i> Rock beats Scissors.</li>
+            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-scissors"></i> Scissors beats Paper.</li>
+            <li class="list-group-item list-group-item-dark"><i class="fas fa-hand-paper"></i> Paper beats Rock.</li>
+            <li class="list-group-item list-group-item-dark">The first player to win 5 rounds is the winner.</li>
+            <li class="list-group-item list-group-item-dark">Play again!</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
-    <!-- End Modal -->
+  </div>
+  <!-- End Modal -->
 
-    <!-- Footer -->
-    <footer class="bg-dark">
-        <p>Author:&copy; Hasibullah Rahmani<br>
-            <a href="mailto:hasibullah.rahmani1995@gmail.com">hr@hasibullah.com</a></p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-dark">
+    <p>Author:&copy; Hasibullah Rahmani<br>
+      <a href="mailto:hasibullah.rahmani1995@gmail.com">hr@hasibullah.com</a></p>
+  </footer>
 
-<!-- Script of javascript Source-->
-<script src="./script/popper.min.js"></script> 
-<script src="./script/jquery-3.5.1.slim.min.js"></script> 
-<script src="./script/bootstrap.min.js"></script>
-<script src="./script/script.js"></script>
+  <!-- Script of javascript Source-->
+  <script src="./script/popper.min.js"></script>
+  <script src="./script/jquery-3.5.1.slim.min.js"></script>
+  <script src="./script/bootstrap.min.js"></script>
+  <script src="./script/script.js"></script>
 
 </body>
+
 </html>
