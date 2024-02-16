@@ -1,6 +1,9 @@
 # Milestone Project 4 - Restaurant Booking System for Renata's Restaurant
 
 ![All devices](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_1.png)
+
+[View the live project here.](https://ihr2295.github.io/irha_games/)
+
 <h1 align="center">IRHA Games Present</h1>
 
 <p align="center">
