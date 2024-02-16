@@ -35,9 +35,7 @@ This repository contains the code for the IRHA A Rock, Paper, Scissors Game, whe
     - Frameworks, Libraries and Programs Used  
 
 * [Testing](#testing)
-    - Testing User Stories from User Experience (UX) Section
-    - Further Testing
-    - Unresolved Bugs 
+    - Unresolved issues 
 
 * [Deployment](#deployment)
 
@@ -218,13 +216,60 @@ The website was tested on Google Chrome, Internet Explorer, Microsoft Edge, and 
 - On Microsoft Edge and Internet Explorer browsers, hovering over links in the navbar pushes them upwards.
 
 ## Validator Testing
-- HTML
-   - No errors were returned when passing through the official W3C validator
-- CSS
-  - No errors were found when passing through the official (Jigsaw) validator
+  - HTML
+    - No errors were returned when passing through the official W3C validator
+  - CSS
+    - No errors were found when passing through the official (Jigsaw) validator
 - JS
-- Accessibility
-  - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools
+  - Accessibility
+    - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools
+
+# Deployment
+
+## GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps:
+
+1. Log in to GitHub and locate the GitHub Repository.
+2. At the top of the Repository (not the top of the page), locate the "Settings" button on the menu. Alternatively, [click here](link-to-GIF) for a GIF demonstrating the process starting from Step 2.
+3. Scroll down the Settings page until you locate the "GitHub Pages" section.
+4. Under "Source," click the dropdown called "None" and select "Master Branch."
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now-published site link in the "GitHub Pages" section.
+
+## Forking the GitHub Repository
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository. Here are the steps:
+
+1. Log in to GitHub and locate the GitHub Repository.
+2. At the top of the Repository (not the top of the page), just above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+## Making a Local Clone
+
+1. Log in to GitHub and locate the GitHub Repository.
+2. Under the repository name, click "Clone or download."
+3. To clone the repository using HTTPS, under "Clone with HTTPS," copy the link.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type the following command and paste the URL you copied in Step 3:
+<br>
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+<br>
+7. Press Enter. Your local clone will be created.
+<br>
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+ <br>
+Cloning into CI-Clone...
+ <br>
+remote: Counting objects: 10, done.
+ <br>
+remote: Compressing objects: 100% (8/8), done.
+ <br>
+remote: Total 10 (delta 1), reused 10 (delta 1)
+ <br>
+Unpacking objects: 100% (10/10), done.
+
 
 <p align="center">
   <img src="https://hasibullah.com/as/test.PNG" alt="Picture">
