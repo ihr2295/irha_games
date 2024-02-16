@@ -1,4 +1,4 @@
-# Milestone Project 4 - Restaurant Booking System for Renata's Restaurant
+# Milestone Project 2 - Rock, Paper, Scissors Game
 
 ![All devices](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_1.png)
 
@@ -26,9 +26,9 @@ This repository contains the code for the IRHA A Rock, Paper, Scissors Game, whe
         - Discrepancy with Original Ideas
         - Links to Wireframes
 * [Features](#features)
-    - Responsivity
-    - Interactive Elements
-    - Features to add in future
+    - Personalization
+    - Intuitive Gameplay
+    - User-Friendly Interface
 
 * [Technologies Used](#technologies-used) 
     - Languages Used
@@ -85,6 +85,49 @@ Welcome to the IRHA A Rock, Paper, Scissors Game repository! Here, we present an
 
         -   Game Page Wireframe - [View](https://github.com/ihr2295/irha_games/blob/main/assets/pdf/Game_Page.pdf)
 
+
+# Features
+
+-   ### Personalization
+
+Customize your gaming experience by adding your name before diving into the action-packed world of Rock, Paper, Scissors
+
+-   ### Intuitive Gameplay
+    -   #### Master the classic dynamics of the game:
+      -   ##### Paper triumphs over Rock.
+      -   ##### Rock conquers Scissors.
+      -   ##### Scissors prevails over Paper.
+
+-   ### User-Friendly Interface   
+    -   #### Enjoy a seamless and user-friendly interface that ensures a smooth start to your gaming journey.
+Get ready to engage in strategic battles where each move could be your key to victory! Enter your name, explore the nuances of the game, and embrace the thrill of Rock, Paper, Scissors!
+
+## Technologies Used
+# Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaSCript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [Javascript:](https://en.wikipedia.org/wiki/JavaScript)  
+    - Javascript was used to define visibility duration for popup messages that signal successful completion of different form related activities.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code and commits and this readme.md files.
+
+
+# Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint compiler to validate the Python files.
+
+-   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
+    - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
 
 <h1 align="center">IRHA Games Present</h1>
 
