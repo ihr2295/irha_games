@@ -39,6 +39,8 @@ This repository contains the code for the IRHA A Rock, Paper, Scissors Game, whe
 
 * [Deployment](#deployment)
 
+* [Screenshots](#Screenshots)
+
 * [Credits](#credits)
 
 # Introduction
@@ -125,53 +127,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-
-## Deployment
-
-## GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps:
-
-1. Log in to GitHub and locate the GitHub Repository.
-2. At the top of the Repository (not the top of the page), locate the "Settings" button on the menu. Alternatively, [click here](link-to-GIF) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" section.
-4. Under "Source," click the dropdown called "None" and select "Master Branch."
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now-published site link in the "GitHub Pages" section.
-
-## Forking the GitHub Repository
-
-By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository. Here are the steps:
-
-1. Log in to GitHub and locate the GitHub Repository.
-2. At the top of the Repository (not the top of the page), just above the "Settings" button on the menu, locate the "Fork" button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-## Making a Local Clone
-
-1. Log in to GitHub and locate the GitHub Repository.
-2. Under the repository name, click "Clone or download."
-3. To clone the repository using HTTPS, under "Clone with HTTPS," copy the link.
-4. Open Git Bash.
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type the following command and paste the URL you copied in Step 3:
-<br>
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-<br>
-7. Press Enter. Your local clone will be created.
-<br>
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
- <br>
-Cloning into CI-Clone...
- <br>
-remote: Counting objects: 10, done.
- <br>
-remote: Compressing objects: 100% (8/8), done.
- <br>
-remote: Total 10 (delta 1), reused 10 (delta 1)
- <br>
-Unpacking objects: 100% (10/10), done.
-
 ## Unresolved Issues
 
 -   ### In general
@@ -180,94 +135,6 @@ Unpacking objects: 100% (10/10), done.
       -Warning: Empty heading. Line 69 index.html 
       -Warning: Empty heading. Line 32 game.html
     -it was left intentionally empty and it is commented in source code.
-
-<h1 align="center">IRHA Games Present</h1>
-
-<p align="center">
-  <img src="https://hasibullah.com/as/logo4.jpg" alt="Picture">
-</p>
-
-**Project by: Hasibullah Rahmani**
-
-View the live project [here](https://hasibullah.com/irha) or by copy & Pasting https://hasibullah.com/irha/ (it was uploaded to my personal hosting).
-
-This repository contains the code for the IRHA A Rock, Paper, Scissors Game, where you can play the classic Game of Rock, Paper, Scissor Game against Computer or System.
-
-![Picture](https://hasibullah.com/as/screenshot.PNG)
-
-## User Experience (UX)
-
-### User Stories
-
-**First-Time Visitor Goals**
-- As a first-time visitor, I want to easily understand the main purpose of the site and learn more about the game and its rules.
-- As a first-time visitor, I want to easily navigate through the site to play the rock, paper, scissor game and have fun.
-
-
-**Returning Visitor Goals**
-- View the optimal layout for the game depending on their device's screen size
-- Play Rock, Paper, Scissors against the computer
-- Maintain the state of the score after refreshing the browser (optional)
-- Bonus: Play Rock, Paper, Scissors, Lizard, Spock against the computer (optional)
-
-
-
-## Design
-
-### Colour Scheme
-
-The three primary colors used for the website are:
-- Blue: #7280ff
-- Yello: #fbaf32
-- Red: #CD212A
-
-### Typography
-
-The main fonts used throughout the website are Segoe UI and Roboto fonts, with sans-serif as the fallback font in case the fonts are not imported correctly.
-
-### Imagery
-
-The large images on the website are designed to be striking and catch the user's attention. They are also compressed for fast loading and good quality.
-
-## Features
-
-- Paper beats Rock
-- Rock beats Scissors
-- Scissors beats Paper
-
-## Technologies Used
-
-### Languages used
-
-- HTML
-- CSS3
-- JavaScript
-
-### Frameworks, Libraries & Programs Used
-
-- Google Fonts: Imported the font into the style.css file, used throughout the project.
-- Font Awesome: Used for icons throughout the website.
-- WEBP
-- JPEG
-- Photoshop: Used to create pictures, resize images, and edit photos for the website.
-- Adobe Illustrator: Used to create vectors, icons, and edit photos for the website.
-- Free pic premium for some premium pictures of course licensed 
-
-## Testing
-
-The website was tested on Google Chrome, Internet Explorer, Microsoft Edge, and Safari browsers. It was also viewed on various devices such as desktop screens (3840 x 2160 pixels), laptops, iPhone 14, and Samsung smartphones. Feedback was gathered from friends, family, mentors, and colleagues to identify bugs and improve the user experience.
-
-## Known Bugs
-- On Microsoft Edge and Internet Explorer browsers, hovering over links in the navbar pushes them upwards.
-
-## Validator Testing
-  - HTML
-    - No errors were returned when passing through the official W3C validator
-  - CSS
-    - No errors were found when passing through the official (Jigsaw) validator
-- JS
-  - Accessibility
-    - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools
 
 # Deployment
 
@@ -315,39 +182,28 @@ remote: Total 10 (delta 1), reused 10 (delta 1)
  <br>
 Unpacking objects: 100% (10/10), done.
 
+# Screenshots
+## Here are more screenshots as per requests:
+- ![Picture](https://hasibullah.com/screenshots/w3/11.jpg)
+- ![Picture](https://hasibullah.com/screenshots/w3/12.jpg)
+- ![Picture](https://hasibullah.com/screenshots/w3/06.JPG)
+- ![Picture](https://hasibullah.com/screenshots/w3/07.JPG)
+- ![Picture](https://hasibullah.com/screenshots/w3/08.JPG)
+- ![Picture](https://hasibullah.com/screenshots/w3/09.JPG)
+- ![Picture](https://hasibullah.com/screenshots/w3/10.JPG)
 
-<p align="center">
-  <img src="https://hasibullah.com/as/test.PNG" alt="Picture">
-</p>
+### Here is deployed link in case you missed it on top
 
-## Deployment
-### Deploying your project
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Link: [github_pages](https://ihr2295.github.io/serrano_restaurant/src/)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+# Credits
 
+### Code
 
-You can host your site using one of these solutions or any of our other trusted providers. I recommend [Namecheap](https://www.namecheap.com/).
+-   Stack Overflow was was researched for syntax, code expressions, code functionalities, problem solving. Validation function for reservation date and time is from there.
 
-### Source Code in GitHub
+-   How to implement widgets for form fields was answered by tutor on FullStack Slack channel.
 
-To view the IRHA A Rock, Paper, Scissors Game website locally, follow these steps:
-1. Clone this repository to your local machine.
-2. Open the index.html file in a web browser.
+### Acknowledgements
 
-### Available Link in my Personal Host
-
-Link: [click here](https://hasibullah.com/irha/)
-
-### Also available in Github pages 
-Link: [click here](https://ihr2295.github.io/irha_games/src/)
-
-## Credits
-
-- Images and graphics were used from [Freepik](https://www.freepik.com/), licensed under the Free and Premium plan.
-
-## Acknowledgments
-
-- My mentor for continuous helpful feedback.
+-   Code Institute.
