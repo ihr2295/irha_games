@@ -15,7 +15,6 @@ This repository contains the code for the IRHA A Rock, Paper, Scissors Game, whe
     - User Stories
         -  First Time Visitor Goals
         -  Returning and Frequent Visitor Goals
-        -  Site Administrator Goals  
 * [Layout](#layout)
 
     - Design
@@ -122,10 +121,13 @@ Get ready to engage in strategic battles where each move could be your key to vi
 
 # Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint compiler to validate the Python files.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project.
 
 -   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
+-   ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_9.png)
+-   ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_10.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+-   ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_11.png)
 
 ## Unresolved Issues
 
