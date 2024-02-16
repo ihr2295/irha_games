@@ -4,6 +4,52 @@
 
 [View the live project here.](https://ihr2295.github.io/irha_games/)
 
+
+This repository contains the code for the IRHA A Rock, Paper, Scissors Game, where you can play the classic Game of Rock, Paper, Scissor Game against Computer or System.
+
+## Table of Contents
+
+* [Introduction](#introduction)
+
+* [UX](#ux) 
+    - User Stories
+        -  First Time Visitor Goals
+        -  Returning and Frequent Visitor Goals
+        -  Site Administrator Goals  
+* [Layout](#layout)
+
+    - Design
+        - Colour scheme
+        - Typography
+        - Images
+    - Wireframes
+        - Discrepancy with Original Ideas
+        - Links to Wireframes
+* [Features](#features)
+    - Responsivity
+    - Interactive Elements
+    - Features to add in future
+
+* [Technologies Used](#technologies-used) 
+    - Languages Used
+    - Frameworks, Libraries and Programs Used  
+
+* [Testing](#testing)
+    - Testing User Stories from User Experience (UX) Section
+    - Further Testing
+    - Unresolved Bugs 
+
+* [Deployment](#deployment)
+
+* [Credits](#credits)
+
+# Introduction
+
+Welcome to the IRHA A Rock, Paper, Scissors Game repository! Here, we present an engaging implementation of the classic Rock, Paper, Scissors Game that allows users to immerse themselves in the timeless battle of wits against a formidable opponent – the Computer or System. This project provides a platform for users to enjoy the thrill of decision-making and strategic thinking, as they face off against an intelligent adversary in the age-old contest of Rock crushing Scissors, Scissors cutting Paper, and Paper covering Rock. Explore the code within this repository to delve into the intricacies of game logic, artificial intelligence, and interactive user experiences. Whether you are a seasoned programmer, a gaming enthusiast, or someone looking for a fun and challenging pastime, IRHA A Rock, Paper, Scissors Game invites you to embark on a journey of strategy, randomness, and entertainment. Let the games begin!
+
+
+
+
 <h1 align="center">IRHA Games Present</h1>
 
 <p align="center">
