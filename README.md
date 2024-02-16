@@ -129,6 +129,15 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
 
+## Unresolved Issues
+
+-   ### In general
+    1. In the W3 Validator There is is 2 warning for index.html and 1 warrning for game.html the warninigs are:
+      -Warning: Empty heading. Line 45 index.html 
+      -Warning: Empty heading. Line 69 index.html 
+      -Warning: Empty heading. Line 32 game.html
+    -it was left intentionally empty and it is commented in source code.
+
 <h1 align="center">IRHA Games Present</h1>
 
 <p align="center">
