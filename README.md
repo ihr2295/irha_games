@@ -81,9 +81,9 @@ Welcome to the IRHA A Rock, Paper, Scissors Game repository! Here, we present an
         -   I originally intended to create my own HTML pages and CSS styling, however, which saved me a huge amount of time. I simply followed the Standard layout,
     -   #### Links to Wireframes
 
-        -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
+        -   Home Page Wireframe - [View](https://github.com/ihr2295/irha_games/blob/main/assets/pdf/Home_Page.pdf)
 
-        -   Game Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
+        -   Game Page Wireframe - [View](https://github.com/ihr2295/irha_games/blob/main/assets/pdf/Game_Page.pdf)
 
 
 <h1 align="center">IRHA Games Present</h1>
