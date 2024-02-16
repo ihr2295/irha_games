@@ -186,7 +186,7 @@ button:hover {
 .rock, .paper, .scissor {
     padding: 13px; /* Increase padding for better clickability */
     border-radius: 50%; /* Make the icons circular */
-    background: #4CAF50; /* Green background color */
+    background: #007BFF; /* Green background color */
     color: #fff; /* White text color */
     font-size: 50px; /* Adjust icon size */
     cursor: pointer;

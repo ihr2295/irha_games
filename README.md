@@ -47,7 +47,43 @@ This repository contains the code for the IRHA A Rock, Paper, Scissors Game, whe
 
 Welcome to the IRHA A Rock, Paper, Scissors Game repository! Here, we present an engaging implementation of the classic Rock, Paper, Scissors Game that allows users to immerse themselves in the timeless battle of wits against a formidable opponent – the Computer or System. This project provides a platform for users to enjoy the thrill of decision-making and strategic thinking, as they face off against an intelligent adversary in the age-old contest of Rock crushing Scissors, Scissors cutting Paper, and Paper covering Rock. Explore the code within this repository to delve into the intricacies of game logic, artificial intelligence, and interactive user experiences. Whether you are a seasoned programmer, a gaming enthusiast, or someone looking for a fun and challenging pastime, IRHA A Rock, Paper, Scissors Game invites you to embark on a journey of strategy, randomness, and entertainment. Let the games begin!
 
+# UX
 
+-   ### User stories 
+
+    -   #### First Time Visitor Goals
+
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the game.
+        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content and game.
+        3. As a First Time Visitor, I want to to have my name as player name.
+        4. As a First Time Visitor, I want to start the game or not start the game and read instructions to learn.
+        5. As a First Time Visitor, I Can play Again and Again.
+
+    -   #### Returning and Frequent Visitor Goals
+
+        1. As a Returning and Frequent Visitor, I want to Enter My Name.
+        2. As a Returning and Frequent Visitor, I want to To play against computer.
+        3. As a Returning and Frequent visitor I want to Play Again if win or lose.
+        4. As a Returning and Frequent visitor I want to read instruction everytime.
+        5. As a Returning and Frequent Visitor, I want to play in any device.
+
+# Layout
+-   ### Design
+    -   #### Colour Scheme
+        -   The main colours in the website theme for header, background, footer and text labels are White, Dark Blue, and electric blue" or "Dodger blue.
+    -   #### Typography
+        -   I used a standard Bootstrap theme with all the components and styling. Times New Roman are the main fonts used, Raleway for label titles and Lora for body text.
+    -   #### Imagery
+        -   Not alot of images was used but icons, and for icons i used Fontawsome.
+  
+*   ### Wireframes
+    -   #### Discrepancy with original ideas
+        -   I originally intended to create my own HTML pages and CSS styling, however, which saved me a huge amount of time. I simply followed the Standard layout,
+    -   #### Links to Wireframes
+
+        -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
+
+        -   Game Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
 
 
 <h1 align="center">IRHA Games Present</h1>
