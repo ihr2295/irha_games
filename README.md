@@ -184,17 +184,18 @@ Unpacking objects: 100% (10/10), done.
 
 # Screenshots
 ## Here are more screenshots as per requests:
-- ![Picture](https://hasibullah.com/screenshots/w3/11.jpg)
-- ![Picture](https://hasibullah.com/screenshots/w3/12.jpg)
-- ![Picture](https://hasibullah.com/screenshots/w3/06.JPG)
-- ![Picture](https://hasibullah.com/screenshots/w3/07.JPG)
-- ![Picture](https://hasibullah.com/screenshots/w3/08.JPG)
-- ![Picture](https://hasibullah.com/screenshots/w3/09.JPG)
-- ![Picture](https://hasibullah.com/screenshots/w3/10.JPG)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_1.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_2.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_3.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_4.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_5.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_6.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_7.png)
+- ![Picture](https://github.com/ihr2295/irha_games/blob/main/assets/images/screenshot_8.png)
 
 ### Here is deployed link in case you missed it on top
 
-Link: [github_pages](https://ihr2295.github.io/serrano_restaurant/src/)
+Link: [github_pages](https://ihr2295.github.io/irha_games/)
 
 # Credits
 
