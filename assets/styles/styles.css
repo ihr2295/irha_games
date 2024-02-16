@@ -306,7 +306,7 @@ button:hover {
 		text-align: center;
 	}
 	.score{
-		position: absolute;
+		position: static;
 		top: 200px;
 		width: 100vw;
 	}
