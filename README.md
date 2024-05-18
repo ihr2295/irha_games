@@ -203,6 +203,27 @@ Link: [github_pages](https://ihr2295.github.io/irha_games/)
 
 ### Code
 
+- This Rock Paper Scissors game was inspired by a tutorial on GeeksforGeeks:
+  [Rock Paper and Scissor Game using JavaScript](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/).
+
+In my last submission of this project, it was indicated by the Code Institute Results Committee that I copied or plagiarized this project. To address this, I have created this document to explain the differences between my project and the tutorial.
+#### Explanation
+
+While the logic and structure of the game were inspired by the GeeksforGeeks tutorial, I wrote the code independently. The following points highlight the differences and my original contributions:
+
+- **Game Structure and Logic:** My implementation uses a different structure for managing the game logic and user interactions. For instance, I encapsulated functions differently and organized the event listeners in a way that suits my project’s specific requirements.
+- **Modal Handling:** I added custom modals for user interaction, which were not present in the original tutorial.
+- **Player Name Management:** I implemented session storage for handling player names, which is not part of the tutorial.
+- **Additional Features:** I included extra features such as instructions modal and restart functionality with personalized messages.
+
+#### Differences
+
+1. **Event Handling:** My code uses a `DOMContentLoaded` event to ensure the DOM is fully loaded before executing any script, whereas the tutorial uses a simpler approach without this consideration.
+2. **Encapsulation:** I encapsulated the entire game logic within a single `game()` function, providing a more modular approach compared to the tutorial.
+3. **User Interactions:** My project includes user interactions like showing and hiding modals, managing player names, and handling button clicks that were not covered in the tutorial.
+
+This project is a testament to my ability to adapt and build upon existing ideas while creating something original and functional.
+
 -   Stack Overflow was was researched for syntax, code expressions, code functionalities, problem solving. Validation function for reservation date and time is from there.
 
 -   How to implement widgets for form fields was answered by tutor on FullStack Slack channel.
