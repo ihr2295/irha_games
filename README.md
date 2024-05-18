@@ -206,7 +206,7 @@ Link: [github_pages](https://ihr2295.github.io/irha_games/)
 - This Rock Paper Scissors game was inspired by a tutorial on GeeksforGeeks:
   [Rock Paper and Scissor Game using JavaScript](https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/).
 
-In my last submission of this project, it was indicated by the Code Institute Results Committee that I copied or plagiarized this project. To address this, I have created this document to explain the differences between my project and the tutorial.
+In my last submission of this project, it was indicated by the Code Institute Results Committee that I copied or plagiarized this project. To address this, I have created this  [Document](https://github.com/ihr2295/irha_games/blob/main/assets/pdf/Structural_Differences.pdf) to explain the differences between my project and the tutorial.
 #### Explanation
 
 While the logic and structure of the game were inspired by the GeeksforGeeks tutorial, I wrote the code independently. The following points highlight the differences and my original contributions:
@@ -224,10 +224,12 @@ While the logic and structure of the game were inspired by the GeeksforGeeks tut
 
 This project is a testament to my ability to adapt and build upon existing ideas while creating something original and functional.
 
--   Stack Overflow was was researched for syntax, code expressions, code functionalities, problem solving. Validation function for reservation date and time is from there.
-
--   How to implement widgets for form fields was answered by tutor on FullStack Slack channel.
-
 ### Acknowledgements
 
+-   Irha (my daughter): Whose name was used as the name of the project and my main source of inspiration.
+-   Stack Overflow: Researched for syntax, code expressions, functionalities, and problem-solving. The validation function for reservation date and time was sourced from Stack Overflow.
+-   ChatGPT: Provided assistance and guidance throughout the project.
+-   CodePen: Guidance Used for DOM manipulation and event listener methods.
+-   GeeksforGeeks: Inspiration and Referenced for additional coding resources and explanations.
+-   Code Institute Slack Community
 -   Code Institute.
